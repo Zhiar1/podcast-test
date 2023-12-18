@@ -4,7 +4,7 @@ jobs:
   build:
       runs-on: ubuntu-latest
       steps:
-        - name: Chechout Repo
+        - name: Checkout Repo
           uses: actions/checkout@v3
         - name: Setup Python
           uses: actions/setup-python@v4
@@ -18,7 +18,8 @@ jobs:
           run: python feed.py
         - name: Push Repo
           run: |
-            git config user.name github.action
-            git config user.email github.action@github.com
+            git config user.name Zhiar1
+            git config user.email zhyar.fwadf17@komar.edu.iq
             git add .
             git commit -m "Auto Feed Modification"
+            git push
